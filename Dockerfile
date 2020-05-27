@@ -10,6 +10,7 @@ RUN apk add --update --no-cache mariadb-connector-c-dev \
 RUN mkdir -p /usr/local/sphinx/
 RUN mkdir -p /var/log/sphinx/
 RUN mkdir -p /etc/sphinx/
+RUN mkdir -p /var/data/sphinx/
 
 RUN wget -q http://sphinxsearch.com/files/${FILE} -O /usr/local/sphinx/sphinx.tar.gz
 RUN cd /usr/local/sphinx/ && tar -C ./ -zxvf sphinx.tar.gz --strip-components 1 && rm sphinx.tar.gz
