@@ -20,9 +20,11 @@ ENV PATH "${PATH}:/usr/local/sphinx/bin"
 COPY ./config/sphinx.conf /etc/sphinx/default.conf
 
 # if you need show log in stdout
-#RUN ln -sv /dev/stdout /var/log/sphinx/query.log
-#RUN ln -sv /dev/stdout /var/log/sphinx/log/searchd.log
+RUN ln -sv /dev/stdout /var/log/sphinx/query.log
+RUN ln -sv /dev/stdout /var/log/sphinx/searchd.log
 
-RUN indexer -v
+#RUN indexer -v
+
+#RUN indexer --all --config /etc/sphinx/default.conf
 
 CMD searchd --nodetach --config /etc/sphinx/default.conf
