@@ -3,7 +3,25 @@ Docker-Sphinx
 
 This repository is based on Linux (alpine:latest). 
 
-How it use with docker-compose
+[Container on DockerHub](https://hub.docker.com/r/dastanaron/sphinx)
+
+How it uses
+------------------------------------------------
+You can pull this container from DockerHub
+
+```bash
+docker pull dastanaron/sphinx
+```
+
+and start it with default settings, or you can create yourself build with your configuration
+
+```bash
+docker run --name sphinx -v /path-to-your-config:/etc/sphinx/ dastanaron/sphinx
+```
+
+This path must contains `default.conf` file
+
+How it uses with docker-compose
 ------------------------------------------------
 You can create your own build, based on this, only with your own config, since in the repository I created it as an example, so that I can check the launch
 
