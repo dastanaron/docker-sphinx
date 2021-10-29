@@ -1,6 +1,6 @@
-FROM alpine:latest
+FROM alpine:3.14
 
-ARG FILE=sphinx-3.2.1-f152e0b-linux-amd64-musl.tar.gz
+ARG FILE=sphinx-3.4.1-efbcc65-linux-amd64-musl.tar.gz
 
 # Install packages
 RUN apk add --update --no-cache mariadb-connector-c-dev \
